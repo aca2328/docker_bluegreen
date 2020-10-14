@@ -10,6 +10,16 @@ It's meant to be used by Kubernetes, and uses the `app_color` environment variab
 
 Please see `k8s/` for examples.
 
+Also usable on a standalone docker host by passing the environment variable from the docker command
+
+```
+docker run -d --restart=always -p 5000:5000 -e app_color=blue --name blue alexfeig/bluegreen
+```
+or
+```
+docker run -d --restart=always -p 5000:5000 -e app_color=green --name green alexfeig/bluegreen
+```
+
 ## Screenshot
 
 ![Screenshot](docs/sample.png)
